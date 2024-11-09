@@ -22,4 +22,9 @@ namespace nn_utils
             std::cout << "]" << std::endl;
         }
     }
+
+    void print(const double scalar)
+    {
+        std::cout << scalar << std::endl;
+    }
 }
