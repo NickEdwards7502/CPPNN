@@ -21,13 +21,13 @@ class Dense {
             std::mt19937 gen(rd());
             std::normal_distribution<double> dist(0.0, 1.0);
 
-            for (int i = 0; i < n_inputs; i++) {
-                for (int j = 0; j < n_neurons; j++) {
+            for (auto i = 0; i < n_inputs; i++) {
+                for (auto j = 0; j < n_neurons; j++) {
                     weights[i][j] = 0.01 * dist(gen);
                 }
             }
 
-            for (int i = 0; i < n_neurons; i++) {
+            for (auto i = 0; i < n_neurons; i++) {
                 biases[i] = 0;
             }
         }

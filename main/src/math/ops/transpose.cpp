@@ -14,9 +14,9 @@ namespace ops
 
         std::vector< std::vector<double> > out(inner_size, std::vector<double>(outer_size));
 
-        for (int i = 0; i < outer_size; i++)
+        for (auto i = 0; i < outer_size; i++)
         {
-            for (int j = 0; j < inner_size; j++)
+            for (auto j = 0; j < inner_size; j++)
             {
                 out[j][i] = mat[i][j];
             }

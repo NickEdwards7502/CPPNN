@@ -36,7 +36,7 @@ namespace nn_utils
             std::cout << "[]" << std::endl;
         } else {
             std::cout << "[" << std::endl;
-            for (int i = 0; i < mat_size; ++i) {
+            for (auto i = 0; i < mat_size; ++i) {
                 int row_size = mat[i].size();
                 if (row_size == 0) {
                     std::cout << "[]";

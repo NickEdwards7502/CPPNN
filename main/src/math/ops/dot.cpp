@@ -46,7 +46,7 @@ namespace ops
 
         std::vector< std::vector<double> > out(outer_size, std::vector<double>(inner_size));
 
-        for (int i = 0; i < outer_size; i++)
+        for (auto i = 0; i < outer_size; i++)
         {
             out[i] = ops::dot(rhs, lhs[i]);
         }

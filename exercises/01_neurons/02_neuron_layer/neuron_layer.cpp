@@ -53,10 +53,10 @@ std::vector<double> layer_2()
     int num_weights = weights.size();
     int num_inputs = inputs.size();
 
-    for (int i = 0; i < num_weights; i++)
+    for (auto i = 0; i < num_weights; i++)
     {
         double neuron_output = 0.0;
-        for (int j = 0; j < num_inputs; j++)
+        for (auto j = 0; j < num_inputs; j++)
         {
             neuron_output = neuron_output
                           + inputs[j]*weights[i][j];
