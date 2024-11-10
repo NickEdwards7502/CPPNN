@@ -1,6 +1,7 @@
 #include "softmax.h"
 
 #include <cmath>
+#include <numeric>
 
 std::vector<double> Softmax::forward(const std::vector<double>& vec)
 {
@@ -12,11 +13,7 @@ std::vector<double> Softmax::forward(const std::vector<double>& vec)
         exps[i] = std::exp(vec[i]);
     }
 
-    double sum = 0;
-    for (auto i = 0; i < size; i++)
-    {
-        sum += exps[i];
-    }
+    double sum = std::accumulate(exps.begin(), exps.end(), 0.0);
 
     std::vector<double> out(size);
     for (auto i = 0; i < size; i++)
