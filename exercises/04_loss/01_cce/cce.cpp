@@ -3,6 +3,7 @@
 #include <vector>
 #include <cmath>
 #include <cassert>
+#include <numeric>
 
 namespace loss
 {
@@ -27,7 +28,7 @@ namespace loss
         return -result;
     }
 
-    std::vector<double> categorical_cross_entropy(
+    double categorical_cross_entropy(
         const std::vector<std::vector<double>>& output,
         const std::vector<std::vector<double>>& target
     )
@@ -35,13 +36,15 @@ namespace loss
         assert(output.size() == target.size()
             && "Mistmatch in number of outputs and number of samples.");
 
-        std::vector<double> result(output.size());
+        std::vector<double> out(output.size());
 
         for (auto i = 0; i < output.size(); i++)
         {
-            result[i] = categorical_cross_entropy(output[i], target[i]);
+            out[i] = categorical_cross_entropy(output[i], target[i]);
         }
 
-        return result;
+        double sum = std::accumulate(out.begin(), out.end(), 0.0);
+
+        return sum / out.size();
     }
 }
