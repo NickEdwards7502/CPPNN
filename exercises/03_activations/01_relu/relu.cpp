@@ -1,5 +1,4 @@
 #include "relu.h"
-#include "utils/utils_stdout.h"
 #include <vector>
 
 double ReLU::forward(const double& scalar) {
