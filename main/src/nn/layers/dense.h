@@ -1,3 +1,6 @@
+#ifndef DENSE_H
+#define DENSE_H
+
 #include <vector>
 
 class Dense {
@@ -14,3 +17,5 @@ public:
     void set_biases(const std::vector<double>& new_biases);
     void shape();
 };
+
+#endif
