@@ -1,10 +1,10 @@
-# CMakeLists.txt for the 01_neurons/02_neuron_layer exercise
+# CMakeLists.txt for the 01_neurons/04_matrix_product exercise
 
 # CMake version
 cmake_minimum_required(VERSION 3.15)
 
 # Define project
-project(CPPNN_01_neurons_02_neuron_layer)
+project(CPPNN_01_neurons_04_matrix_product)
 
 # Set C++20 standard
 set(CMAKE_CXX_STANDARD 20)
